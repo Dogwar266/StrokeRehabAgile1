@@ -11,57 +11,55 @@ import UIKit
 class timerScreen: UIViewController {
 
     @IBOutlet weak var timerLabel: UILabel!
-    var timeMins = 0.0
+    var timeMins = TimeInterval(0)
+    var formatter = DateComponentsFormatter()
+    var goalCountFromGoalSetScreen: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        formatter.allowedUnits = [.minute, .second]
+        formatter.zeroFormattingBehavior = .pad
         
-     
+        print("timerScreen goal var: \(goalSetScreen.init().goal)"	)
     }
     
 
     @IBAction func resetTimer(_ sender: Any) {
         timeMins = 0.0
         
-        timerLabel.text = String("\(timeMins)mins ")
+        timerLabel.text = formatter.string(from: timeMins)
     }
     @IBAction func plusTenSecs(_ sender: Any) {
-        timeMins += 0.10
-        print(String(timeMins).suffix(2))
-        if (String(timeMins).suffix(1) == "6"){
-            timeMins += 0.40
-        }
-        timerLabel.text = String(format: "%.2f", timeMins, "mins")
+        timeMins += 10
+        timerLabel.text = formatter.string(from: timeMins)
     }
     @IBAction func plusOneMins(_ sender: Any) {
-        timeMins = timeMins + 1
+        timeMins = timeMins + 60
         
-        timerLabel.text = String("\(timeMins)mins")
+        timerLabel.text = formatter.string(from: timeMins)
     }
     @IBAction func plusTenMins(_ sender: Any) {
-        timeMins = timeMins + 10
+        timeMins = timeMins + 600
         
-        timerLabel.text = String("\(timeMins)mins")
+        timerLabel.text = formatter.string(from: timeMins)
+        
     }
     
     @IBAction func minusTenSecs(_ sender: Any) {
-        timeMins -= 0.10
-        print(String(timeMins).suffix(2))
-        if (String(timeMins).suffix(1) == "6"){
-            timeMins -= 0.40
-        }
-        timerLabel.text = String(format: "%.2f", timeMins, "mins")
+        timeMins -= 10
+        timerLabel.text = formatter.string(from: timeMins)
     }
     
     @IBAction func minusOneMins(_ sender: Any) {
-        timeMins = timeMins - 1
+        timeMins = timeMins - 60
         
-        timerLabel.text = String("\(timeMins)mins")
+        timerLabel.text = formatter.string(from: timeMins)
     }
     
     @IBAction func minusTenMins(_ sender: Any) {
-        timeMins = timeMins - 10
+        timeMins = timeMins - 600
         
-        timerLabel.text = String("\(timeMins)mins")
+        timerLabel.text = formatter.string(from: timeMins)
     }
     /*
     // MARK: - Navigation
@@ -75,8 +73,12 @@ class timerScreen: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "goalRepsSegue" {
             print("goalRepsSegue Called!")
-            let timerValue = segue.destination as! goalCounter
-            timerValue.valueFromTimerSetView = timerLabel.text
+            let goalCounter = segue.destination as! goalCounter
+            goalCounter.valueFromTimerSetView = timeMins
+            goalCounter.goalValueFromTimerSetView = goalCountFromGoalSetScreen ?? 0
+            print("from timerScreen segue: \(goalCounter.valueFromTimerSetView)")
         }
     }
+    
+    //override func prepare(for segue: )
 }

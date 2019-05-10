@@ -10,11 +10,11 @@ import UIKit
 
 class goalSetScreen: UIViewController {
     @IBOutlet var setGoal: UILabel!
-    var goal = 0 // Sets the goal label as an integer
+    var goal = 0// Sets the goal label as an integer
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        
+        print("viewdidload: \(goal)")
         // Do any additional setup after loading the view.
     }
     
@@ -61,6 +61,7 @@ class goalSetScreen: UIViewController {
     @IBAction func incrementTwenty(_ sender: Any) {
         goal = goal + 20
         setGoal.text = String(goal)
+        print(goal)
     }
     
     /*
@@ -74,12 +75,12 @@ class goalSetScreen: UIViewController {
      
         Adding a custom Segue made it worse!
      
- 
+ */
      override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        if segue.identifier == "goalScreenSegue" {
-            print("goalScreenSegue Called!")
-            let goalCount = segue.destination as! goalCounter
-            goalCount.nameFromGoalSetView = goalCount.text
+        if segue.identifier == "timerScreenSegue" {
+            print("timerScreenSegue Called!")
+            let timerScreen = segue.destination as! timerScreen
+            timerScreen.goalCountFromGoalSetScreen = goal
         }
-    } */
+    }
 }

@@ -14,18 +14,42 @@ class goalCounter: UIViewController {
     @IBOutlet weak var armButton: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var goalCount: UILabel!
-    var nameFromGoalSetView: String?
-    var valueFromTimerSetView: String?
+    
+    var timer = Timer()
+    var isTimerRunning = false
+
+    var valueFromTimerSetView = TimeInterval(0)
+    var goalValueFromTimerSetView = 0
+    var formatter = DateComponentsFormatter()
+    var count:Int = 0//value to be displayed on the counter
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        self.goalCount.text = nameFromGoalSetView
-        self.timerLabel.text = valueFromTimerSetView
-        print(timerLabel.text)
+       
+        formatter.allowedUnits = [.minute, .second]
+        formatter.zeroFormattingBehavior = .pad
         
+        // Do any additional setup after loading the view.
+        //self.goalCount.text = nameFromGoalSetView
+        timerLabel.text = formatter.string(from: valueFromTimerSetView)
+        goalCount.text = String(goalValueFromTimerSetView)
+        count = goalValueFromTimerSetView
+        print("goalcounterscreen: \(valueFromTimerSetView)")
+
+        runTimer()
     }
-    var count:Int = 0 //value to be displayed on the counter
+    
+    func runTimer()
+    {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(goalCounter.updateTimer)), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTimer()
+    {
+        valueFromTimerSetView -= 1
+        timerLabel.text = formatter.string(from: valueFromTimerSetView)
+    }
+   
     var armed:Bool = false //used for checking if the counter has been armed
     /*
      The arm function is used to arm the counter, making it ready to trigger.
@@ -46,7 +70,7 @@ class goalCounter: UIViewController {
         {
             if count >= 0
             {
-                count += 1 //increase the value of count
+                count -= 1 //decrease the value of count
                 goalCount.text = String(count) //change the label that displays the counter value
                 armed = false //de-arms the counter so its can be armed again
                 print(count)
@@ -64,7 +88,7 @@ class goalCounter: UIViewController {
     }
     func reset() -> Void
     {
-        count = 0
+        count = goalValueFromTimerSetView
         goalCount.text = String(count)
     }
     @IBOutlet weak var countDisplay: UILabel! //declares our counter display in the code
