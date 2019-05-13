@@ -14,6 +14,7 @@
 		9E227305227BC179003EB684 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E227303227BC179003EB684 /* LaunchScreen.storyboard */; };
 		9E227310227BC179003EB684 /* counterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E22730F227BC179003EB684 /* counterTests.swift */; };
 		9E22731B227BC179003EB684 /* counterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E22731A227BC179003EB684 /* counterUITests.swift */; };
+		CD8B9CF72289390100055AD0 /* settingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8B9CF62289390100055AD0 /* settingsScreen.swift */; };
 		D5359C9D22816AD300243EAA /* timerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5359C9C22816AD300243EAA /* timerScreen.swift */; };
 		D5359C9F228185C500243EAA /* goalCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5359C9E228185C500243EAA /* goalCounter.swift */; };
 		D5697754227C222700F6064A /* goalSetScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5697753227C222700F6064A /* goalSetScreen.swift */; };
@@ -50,6 +51,7 @@
 		9E227316227BC179003EB684 /* counterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = counterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E22731A227BC179003EB684 /* counterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = counterUITests.swift; sourceTree = "<group>"; };
 		9E22731C227BC179003EB684 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD8B9CF62289390100055AD0 /* settingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsScreen.swift; sourceTree = "<group>"; };
 		D5359C9C22816AD300243EAA /* timerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timerScreen.swift; sourceTree = "<group>"; };
 		D5359C9E228185C500243EAA /* goalCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalCounter.swift; sourceTree = "<group>"; };
 		D5697753227C222700F6064A /* goalSetScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalSetScreen.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				9E2272FA227BC178003EB684 /* AppDelegate.swift */,
 				9E2272FC227BC178003EB684 /* ViewController.swift */,
 				9E2272FE227BC178003EB684 /* Main.storyboard */,
+				CD8B9CF62289390100055AD0 /* settingsScreen.swift */,
 				D5359C9E228185C500243EAA /* goalCounter.swift */,
 				D5359C9C22816AD300243EAA /* timerScreen.swift */,
 				9E227301227BC179003EB684 /* Assets.xcassets */,
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD8B9CF72289390100055AD0 /* settingsScreen.swift in Sources */,
 				9E2272FD227BC178003EB684 /* ViewController.swift in Sources */,
 				D5359C9D22816AD300243EAA /* timerScreen.swift in Sources */,
 				D5697754227C222700F6064A /* goalSetScreen.swift in Sources */,
