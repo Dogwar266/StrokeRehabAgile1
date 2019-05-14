@@ -76,7 +76,7 @@ class goalSetScreen: UIViewController {
         Adding a custom Segue made it worse!
      
  */
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "timerScreenSegue" {
             print("timerScreenSegue Called!")
             let timerScreen = segue.destination as! timerScreen

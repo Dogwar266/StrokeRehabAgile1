@@ -24,9 +24,12 @@ class goalCounter: UIViewController {
     var count:Int = 0//value to be displayed on the counter
     var countdown = TimeInterval(0)
 
+    let blah = settingsScreen()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        let what = blah.timerHidden
+        print("timerhidden: \(what)")
         formatter.allowedUnits = [.minute, .second]//formats the TimeInterval datatype to look like mm:ss
         formatter.zeroFormattingBehavior = .pad
         countdown = valueFromTimerSetView
@@ -103,6 +106,14 @@ class goalCounter: UIViewController {
             self.present(alert, animated: true)//presents the alert
         }
         
+        if goalValueFromTimerSetView > 0 && count == 0
+        {
+            let alert = UIAlertController(title: "Congratulations!", message: "You have completed your target reps.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil)) //adds a continue button to the alerts so the user isn't stuck in error message hell.
+            alert.addAction(UIAlertAction(title: "Reset", style: .default, handler: {(alert: UIAlertAction!) in self.reset()}))
+            self.present(alert, animated: true)//presents the alert
+        }
     }
     func reset() -> Void //resets the goal and timer values to their starting values and refreshes the labels
     {

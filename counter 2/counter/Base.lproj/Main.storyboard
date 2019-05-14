@@ -177,7 +177,6 @@
                                         <state key="normal" title="+5"/>
                                         <connections>
                                             <action selector="incrementFive:" destination="V7v-E9-J7K" eventType="touchUpInside" id="mGl-H2-lRW"/>
-                                            <segue destination="kBK-qZ-5vV" kind="custom" identifier="sendGoalValue" id="7wA-H1-5z2"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6o-W8-lsO">
@@ -259,9 +258,28 @@
                     <view key="view" contentMode="scaleToFill" id="hvE-dl-3vF">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z8z-zR-kLa">
+                                <rect key="frame" x="318" y="306" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="hideTimer:" destination="yfa-dE-CFk" eventType="valueChanged" id="td0-JD-bWU"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hide Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAU-2f-VVh">
+                                <rect key="frame" x="217" y="311" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ipg-cM-xyg"/>
                     </view>
+                    <connections>
+                        <outlet property="hideTimer" destination="Z8z-zR-kLa" id="3ZD-tF-mBo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C5V-Gu-WO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -499,10 +517,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aAh-WZ-XkG"/>
         <segue reference="tzy-5s-gxF"/>
-        <segue reference="h1R-vn-hHn"/>
-        <segue reference="EoR-pb-SFR"/>
-        <segue reference="Z7T-v9-xzj"/>
+        <segue reference="l6F-Xk-DjB"/>
+        <segue reference="BGw-Zm-Q6H"/>
+        <segue reference="zR4-zu-gZS"/>
     </inferredMetricsTieBreakers>
 </document>

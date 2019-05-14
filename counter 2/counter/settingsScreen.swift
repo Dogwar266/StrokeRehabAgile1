@@ -10,13 +10,20 @@ import UIKit
 
 class settingsScreen: UIViewController {
 
+   var timerHidden = false
+    
+    @IBOutlet weak var hideTimer: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func hideTimer(_ sender: Any) {
+        timerHidden = hideTimer.isOn
+        print("timerHidden: \(timerHidden)")
+    }
     /*
     // MARK: - Navigation
 
