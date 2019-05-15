@@ -18,6 +18,11 @@
 		D5359C9D22816AD300243EAA /* timerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5359C9C22816AD300243EAA /* timerScreen.swift */; };
 		D5359C9F228185C500243EAA /* goalCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5359C9E228185C500243EAA /* goalCounter.swift */; };
 		D5697754227C222700F6064A /* goalSetScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5697753227C222700F6064A /* goalSetScreen.swift */; };
+		D58E2897228BA0CE00478307 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58E2896228BA0CE00478307 /* Database.swift */; };
+		D58E2899228BA19000478307 /* DBConectionAndDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58E2898228BA19000478307 /* DBConectionAndDataController.swift */; };
+		D58E289B228BA2A200478307 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58E289A228BA2A200478307 /* Patient.swift */; };
+		D58E289D228BA31600478307 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58E289C228BA31600478307 /* Mission.swift */; };
+		D58E289F228BA3F300478307 /* CounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58E289E228BA3F300478307 /* CounterModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,11 @@
 		D5359C9C22816AD300243EAA /* timerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timerScreen.swift; sourceTree = "<group>"; };
 		D5359C9E228185C500243EAA /* goalCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalCounter.swift; sourceTree = "<group>"; };
 		D5697753227C222700F6064A /* goalSetScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalSetScreen.swift; sourceTree = "<group>"; };
+		D58E2896228BA0CE00478307 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		D58E2898228BA19000478307 /* DBConectionAndDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBConectionAndDataController.swift; sourceTree = "<group>"; };
+		D58E289A228BA2A200478307 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		D58E289C228BA31600478307 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
+		D58E289E228BA3F300478307 /* CounterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,12 +115,17 @@
 		9E2272F9227BC178003EB684 /* counter */ = {
 			isa = PBXGroup;
 			children = (
+				D58E289E228BA3F300478307 /* CounterModel.swift */,
+				D58E289C228BA31600478307 /* Mission.swift */,
 				D5697753227C222700F6064A /* goalSetScreen.swift */,
 				9E2272FA227BC178003EB684 /* AppDelegate.swift */,
 				9E2272FC227BC178003EB684 /* ViewController.swift */,
 				9E2272FE227BC178003EB684 /* Main.storyboard */,
 				CD8B9CF62289390100055AD0 /* settingsScreen.swift */,
 				D5359C9E228185C500243EAA /* goalCounter.swift */,
+				D58E2896228BA0CE00478307 /* Database.swift */,
+				D58E2898228BA19000478307 /* DBConectionAndDataController.swift */,
+				D58E289A228BA2A200478307 /* Patient.swift */,
 				D5359C9C22816AD300243EAA /* timerScreen.swift */,
 				9E227301227BC179003EB684 /* Assets.xcassets */,
 				9E227303227BC179003EB684 /* LaunchScreen.storyboard */,
@@ -270,9 +285,14 @@
 			files = (
 				CD8B9CF72289390100055AD0 /* settingsScreen.swift in Sources */,
 				9E2272FD227BC178003EB684 /* ViewController.swift in Sources */,
+				D58E289B228BA2A200478307 /* Patient.swift in Sources */,
+				D58E289F228BA3F300478307 /* CounterModel.swift in Sources */,
 				D5359C9D22816AD300243EAA /* timerScreen.swift in Sources */,
 				D5697754227C222700F6064A /* goalSetScreen.swift in Sources */,
 				D5359C9F228185C500243EAA /* goalCounter.swift in Sources */,
+				D58E2897228BA0CE00478307 /* Database.swift in Sources */,
+				D58E2899228BA19000478307 /* DBConectionAndDataController.swift in Sources */,
+				D58E289D228BA31600478307 /* Mission.swift in Sources */,
 				9E2272FB227BC178003EB684 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
