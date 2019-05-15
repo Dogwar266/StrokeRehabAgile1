@@ -13,7 +13,7 @@ class goalSetScreen: UIViewController {
     var goal = 0// Sets the goal label as an integer
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+       self.navigationItem.hidesBackButton = true
         print("viewdidload: \(goal)")
         // Do any additional setup after loading the view.
     }

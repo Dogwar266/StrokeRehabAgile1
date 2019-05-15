@@ -28,6 +28,7 @@ class goalCounter: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
         let what = blah.timerHidden
         print("timerhidden: \(what)")
         formatter.allowedUnits = [.minute, .second]//formats the TimeInterval datatype to look like mm:ss

@@ -17,6 +17,7 @@ class timerScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
         formatter.allowedUnits = [.minute, .second]
         formatter.zeroFormattingBehavior = .pad
         
