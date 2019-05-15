@@ -24,7 +24,7 @@ class goalSetScreen: UIViewController {
     */
     
     @IBAction func negateFive(_ sender: Any) {
-        if goal > 5
+        if goal > 0
         {
             goal = goal - 5
             setGoal.text = String(goal)
@@ -32,7 +32,7 @@ class goalSetScreen: UIViewController {
 
     }
     @IBAction func negateTen(_ sender: Any) {
-        if goal > 5
+        if goal > 0
         {
             goal = goal - 10
             setGoal.text = String(goal)
@@ -40,7 +40,7 @@ class goalSetScreen: UIViewController {
     }
     
     @IBAction func negateFifteen(_ sender: Any) {
-        if goal > 5
+        if goal > 0
         {
             goal = goal - 15
             setGoal.text = String(goal)
@@ -48,7 +48,7 @@ class goalSetScreen: UIViewController {
     }
     
     @IBAction func negateTwenty(_ sender: Any) {
-        if goal > 5
+        if goal > 0
         {
             goal = goal - 20
             setGoal.text = String(goal)
