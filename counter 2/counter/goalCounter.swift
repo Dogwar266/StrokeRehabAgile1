@@ -24,13 +24,13 @@ class goalCounter: UIViewController {
     var count:Int = 0//value to be displayed on the counter
     var countdown = TimeInterval(0)
 
-    let blah = settingsScreen()
+   // let blah = settingsScreen()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
-        let what = blah.timerHidden
-        print("timerhidden: \(what)")
+        let what = settings.timerHidden
+        print("goalCounter timerhidden: \(what)")
         formatter.allowedUnits = [.minute, .second]//formats the TimeInterval datatype to look like mm:ss
         formatter.zeroFormattingBehavior = .pad
         countdown = valueFromTimerSetView
@@ -40,7 +40,7 @@ class goalCounter: UIViewController {
         goalCount.text = String(goalValueFromTimerSetView)
         count = goalValueFromTimerSetView
         print("goalcounterscreen: \(valueFromTimerSetView)")
-
+        timerLabel.isHidden = settings.timerHidden
         runTimer()//starts the timer as soon as the page is displayed
     }
     
