@@ -32,6 +32,7 @@ class settingsScreen: UIViewController {
         settings.timerHidden = hideTimer.isOn
         print("timerHidden: \(settings.timerHidden)")
     }
+    
     /*
     // MARK: - Navigation
 

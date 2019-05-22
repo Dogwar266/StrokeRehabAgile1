@@ -48,17 +48,29 @@ class timerScreen: UIViewController {
     
     @IBAction func minusTenSecs(_ sender: Any) {
         timeMins -= 10
+        if timeMins < 0
+        {
+            timeMins = 0
+        }
         timerLabel.text = formatter.string(from: timeMins)
     }
     
     @IBAction func minusOneMins(_ sender: Any) {
         timeMins = timeMins - 60
+        if timeMins < 0
+        {
+            timeMins = 0
+        }
         
         timerLabel.text = formatter.string(from: timeMins)
     }
     
     @IBAction func minusTenMins(_ sender: Any) {
         timeMins = timeMins - 600
+        if timeMins < 0
+        {
+            timeMins = 0
+        }
         
         timerLabel.text = formatter.string(from: timeMins)
     }

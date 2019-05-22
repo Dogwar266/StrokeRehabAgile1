@@ -27,6 +27,10 @@ class goalSetScreen: UIViewController {
         if goal > 0
         {
             goal = goal - 5
+            if goal < 0
+            {
+                goal = 0
+            }
             setGoal.text = String(goal)
         }
 
@@ -35,6 +39,10 @@ class goalSetScreen: UIViewController {
         if goal > 0
         {
             goal = goal - 10
+            if goal < 0
+            {
+                goal = 0
+            }
             setGoal.text = String(goal)
         }
     }
@@ -43,6 +51,10 @@ class goalSetScreen: UIViewController {
         if goal > 0
         {
             goal = goal - 15
+            if goal < 0
+            {
+                goal = 0
+            }
             setGoal.text = String(goal)
         }
     }
@@ -51,6 +63,10 @@ class goalSetScreen: UIViewController {
         if goal > 0
         {
             goal = goal - 20
+            if goal < 0
+            {
+                goal = 0
+            }
             setGoal.text = String(goal)
         }
     }
